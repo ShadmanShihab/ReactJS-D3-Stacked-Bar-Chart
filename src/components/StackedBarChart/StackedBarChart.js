@@ -10,6 +10,7 @@ import {
   stackOrderAscending
 } from "d3";
 import useResizeObserver from "./useResizeObserver";
+import ResizeObserver from "resize-observer-polyfill";
 
 /**
  * Component that renders a StackedBarChart
@@ -39,8 +40,8 @@ function StackedBarChart({ data, keys, colors }) {
     // scales
     const xScale = scaleBand()
       .domain(data.map(d => d.year))
-      .range([0, width])
-      .padding(0.25);
+      .range([400, width/1.5])
+      .padding(0.5);
 
     const yScale = scaleLinear()
       .domain(extent)
@@ -74,7 +75,7 @@ function StackedBarChart({ data, keys, colors }) {
 
   return (
     <React.Fragment>
-      <div ref={wrapperRef} style={{ marginBottom: "2rem" }}>
+      <div className="stackedBarChart" ref={wrapperRef} style={{ marginBottom: "2rem" }}>
         <svg ref={svgRef}>
           <g className="x-axis" />
           <g className="y-axis" />

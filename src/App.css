@@ -1,4 +1,4 @@
-/* .App {
+.App {
   text-align: center;
 }
 
@@ -35,8 +35,11 @@
   to {
     transform: rotate(360deg);
   }
-} */
+}
 
+
+
+/* CSS for stacked bar chart starts here */
 svg {
   display: block;
   width: 100%;
@@ -49,17 +52,26 @@ svg rect.selection {
   stroke: none;
 }
 
+.links{
+  text-decoration: none;
+  padding: 20px;
+}
+
 #root {
-  max-width: 600px;
-  margin: 100px 0;
-  /* display: flex;
+  max-width:100vw;
+  margin: 0px 0;
+   /* display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: center; */
+  justify-content: center;  */
   height: 100vh;
-  padding: 0 50px 150px;
+  padding: 0 50px 150px; 
   text-align: center;
   box-sizing: border-box;
+} 
+
+.stacked-bar-chart{
+
 }
 
 button {
@@ -92,3 +104,34 @@ video {
   display: inline-block;
   margin: 0 0.5em;
 }
+
+/* CSS for stacked bar chart ends here */
+
+
+
+/* CSS for  bar chart starts here */
+.bar-chart-layout
+svg {
+  /* background: #eee; */
+  overflow: visible;
+  display: block;
+  width: 100%;
+  margin-top: 200px;
+  margin-left: 300px;
+  text-align: center;
+}
+
+
+/* CSS for  bar chart ends here */
+
+
+
+
+/*Css for pie chart starts here*/
+.piechart{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 450px;;
+}
+/*Css for pie chart ends here*/

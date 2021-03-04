@@ -5,7 +5,7 @@ import ResizeObserver from "resize-observer-polyfill";
  * Hook, that returns the current dimensions of an HTML element.
  * Doesn't play well with SVG.
  */
-
+// This file is for responsiveness of the stackedBarChart
 const useResizeObserver = ref => {
   const [dimensions, setDimensions] = useState(null);
   useEffect(() => {
